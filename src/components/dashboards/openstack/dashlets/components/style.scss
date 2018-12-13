@@ -1,0 +1,62 @@
+.dashlet-header {
+  display: flex;
+
+  & .left-side {
+    margin: 0 0 0 20px;
+    & span {
+      margin: 0;
+      text-transform: capitalize;
+    }
+  }
+  & .right-side {
+    margin-left: auto;
+    padding-right: 20px;
+    & img {
+      height: 35px;
+      margin: 15px 0 0 0;
+      cursor: pointer;
+    }
+  }
+  & .additional-field {
+    & label {
+      cursor: pointer;
+    }
+    img {
+      height: 20px;
+      margin: 0 0 0 15px;
+    }
+  }
+}
+
+.simple-input {
+  top: 0 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.modal-content-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  & .popup-label-content {
+    display: flex;
+    justify-content: center;
+    & h1 {
+      color: black;
+    }
+  }
+}
+
+.xml-pretty {
+  font-family: monospace;
+
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+
+  -ms-word-wrap: break-word;
+  -moz-word-break: break-word;
+  -o-word-break: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+}

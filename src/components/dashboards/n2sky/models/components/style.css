@@ -1,0 +1,99 @@
+.empty-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  margin-bottom: 3rem;
+  font-family: Lekton, serif;
+  margin-top: 100px;
+  cursor: none; }
+  .empty-section button {
+    cursor: default;
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    transition: all .5s ease;
+    color: #8a8a8a;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    /*
+    Above is shorthand for:
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    border-bottom-right-radius: 225px 15px;
+    border-bottom-left-radius:15px 255px;
+    */ }
+    .empty-section button:hover {
+      box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3); }
+    .empty-section button.lined.thick {
+      border: solid 7px #41403E; }
+    .empty-section button.dotted.thick {
+      border: dotted 5px #41403E; }
+    .empty-section button.dashed.thick {
+      border: dashed 5px #41403E; }
+    .empty-section button.lined.thin {
+      border: solid 2px #8a8a8a; }
+    .empty-section button.dotted.thin {
+      border: dotted 2px #8a8a8a; }
+    .empty-section button.dashed.thin {
+      border: dashed 2px #8a8a8a; }
+
+.pointer-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .pointer-img img {
+    height: 80px; }
+
+@media (max-width: 620px) {
+  body h1 {
+    margin-top: 10px; }
+  body section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px; }
+    body section button {
+      align-self: center;
+      margin-bottom: 10px; } }
+.refresh-button {
+  display: flex;
+  justify-content: center; }
+  .refresh-button img {
+    height: 45px;
+    opacity: .9;
+    cursor: pointer; }
+    .refresh-button img:hover {
+      -webkit-animation-name: spinnerRotate;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spinnerRotate;
+      -moz-animation-duration: 2s;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spinnerRotate;
+      -ms-animation-duration: 2s;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear; }
+
+.icon-button-in-table {
+  padding: 5px;
+  transition: all .2s ease-in-out; }
+  .icon-button-in-table:hover {
+    transform: scale(1.1); }
+
+.custom-table thead tr th {
+  padding: 10px; }
+.custom-table tbody td {
+  padding: 5px;
+  text-align: center; }
+.custom-table tbody tr:hover {
+  background-color: #d1d1d1; }
+
+/*# sourceMappingURL=style.css.map */

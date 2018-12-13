@@ -1,0 +1,32 @@
+$color-1: rgba(14, 12, 17, 0.58);
+
+
+.admin-tools-container {
+
+  & div {
+    display: flex;
+    justify-content: center;
+  }
+
+  & a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    & img {
+      height: 50px;
+      margin: 15px;
+    }
+    & span {
+      color: #FFF;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $color-1;
+      &:before {
+        background-color: $color-1;
+      }
+    }
+  }
+}

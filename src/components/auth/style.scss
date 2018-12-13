@@ -1,0 +1,380 @@
+img {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Container */
+.container {
+  position: absolute;
+  width: 24em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: intro .7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Profile Card */
+.profile {
+  position: relative;
+}
+
+.profile--open {
+}
+
+.profile--open .profile__form {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transform: translateY(-6em);
+  padding-top: 12em;
+}
+
+.profile--open .profile__fields {
+  opacity: 1;
+  visibility: visible;
+}
+
+.profile--open .profile__avatar {
+  transform: translate(-50%, -3.5em);
+}
+
+.profile__form {
+  position: relative;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 3em;
+  border-radius: .25em;
+  -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+  transition: opacity .4s ease-in-out,
+  height .4s ease-in-out,
+  transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  padding .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile__fields {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile__avatar {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  //border-radius: 1.25em;
+  overflow: hidden;
+  width: 6.5em;
+  //height: 6.5em;
+  display: block;
+  transition: transform .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+
+.profile__avatar:focus {
+  outline: 0;
+}
+
+.profile__footer {
+  position: absolute;
+  left: 45%;
+  margin-left: -100px;
+  bottom: 0;
+}
+
+/* Form */
+.field {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  line-height: 2rem;
+  bottom: 0;
+  color: #999;
+  transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #eee;
+  color: #777;
+  transition: all .2s ease-in;
+}
+
+.input:focus {
+  outline: 0;
+  border-color: #ccc;
+}
+
+/* Using required and a faux pattern to see if input has text from http://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css */
+.input:focus + .label,
+input:valid + .label {
+  transform: translateY(-100%);
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* Button */
+.btn {
+  border: 0;
+  font-size: 0.75rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  color: white;
+  background: #8E49E8;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+  margin: 10px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #A678E2;
+}
+
+/* Intro animation */
+@keyframes intro {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+///////\\\
+
+// based on https://codepen.io/ellgine/pen/EjeXOZ
+
+$colors: (
+        background: #1d1f20,
+        text: #eee
+);
+
+$font: (
+        family: sans-serif,
+        size: 24px,
+        letter-spacing: 0
+);
+
+$config: (
+        animated: false,
+        nb-letters: 16,
+        animation-length: 4s,
+        mask-letters: ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9")
+);
+
+// ----------------------------------
+
+@function color($value) {
+  @return map-get($colors, $value);
+}
+
+@function font($value) {
+  @return map-get($font, $value);
+}
+
+@function config($value) {
+  @return map-get($config, $value);
+}
+
+@function random-string($list) {
+  $result: null;
+  @for $i from 1 through length($list) {
+    $random: random(length($list));
+    $current: nth($list, $random);
+    $list: remove-nth($list, $random);
+    $result: $result#{$current};
+  }
+  @return $result;
+}
+
+@function remove-nth($list, $index) {
+  $result: ();
+  @for $i from 1 through length($list) {
+    @if $i != $index {
+      $result: append($result, nth($list, $i));
+    }
+  }
+  @return $result;
+}
+
+@mixin respond-to($breakpoint) {
+  @if type-of($breakpoint) == list {
+    @media (min-width: nth($breakpoint, 1)) and (max-width: nth($breakpoint, 2)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// ----------------------------------
+
+.wrapper-header {
+  margin-top: 10px;
+}
+
+.letter {
+  font-family: Lekton;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4em;
+  letter-spacing: .1em;
+  text-decoration: none;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: #2f3031;
+  }
+}
+
+// ----------------------------------
+
+@for $i from 1 through config(nb-letters) {
+  $length: length(config(mask-letters));
+  $random: random($length);
+  $steps: $random - 1;
+  $offset: font(size) * $steps * -1;
+  $delay: random(100) / 100;
+  $duration: $steps * (config(animation-length) / $random);
+  .letter:nth-child(#{$i}):before {
+    content: quote(random-string(config(mask-letters)));
+    margin-top: $offset;
+    animation-name: letter#{$i};
+    animation-duration: $duration - ($duration * $delay);
+    animation-delay: $delay * 1s;
+    animation-fill-mode: forwards;
+    //animation: letter#{$i} 5s infinite;
+    //animation-direction: alternate;
+  }
+  @keyframes letter#{$i} {
+    from {
+      margin-top: $offset;
+    }
+    to {
+      margin-top: font(size);
+    }
+  }
+}
+
+@-webkit-keyframes spinnerRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinnerRotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes spinnerRotate {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+#spin {
+  -webkit-animation-name: spinnerRotate;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinnerRotate;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spinnerRotate;
+  -ms-animation-duration: 20s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+}
+
+//----- PROFILE
+
+.profile-container {
+  padding: 100px;
+  text-align: center;
+}
+
+.profile-img {
+  display: block;
+  height: 7em;
+  margin-right: auto;
+  margin-left: auto;
+  border: .2em solid #636363;
+  border-radius: 100%;
+  box-shadow:  0 1px 0 0 rgba(0,0,0,.1);
+}
+
+.profile-text {
+  margin-top: -3.5em;
+  padding: 5em 1.5em 1.5em 1.5em;
+  background: #636363;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1)
+}
+
+.profile-name{
+  margin-right: -1em;
+  margin-bottom: .75em;
+  margin-left: -1em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: .75em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.profile-title {
+  color: #ccc;
+  cursor: pointer;
+}

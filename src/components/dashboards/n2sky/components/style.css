@@ -1,0 +1,100 @@
+.no-own-nn-container {
+  display: flex;
+  justify-content: center; }
+  .no-own-nn-container .no-nn-content-container {
+    width: 350px; }
+    .no-own-nn-container .no-nn-content-container .header-label {
+      display: block;
+      margin: 35px 0 35px 0; }
+
+.projectLabel {
+  display: flex;
+  justify-content: center; }
+
+#result {
+  width: 100%;
+  height: 200px; }
+
+@keyframes page_in {
+  50% {
+    transform: translateY(-40px) rotate(25deg); }
+  75% {
+    transform: translateY(-35px) rotate(23deg); }
+  100% {
+    transform: translateY(-40px) rotate(25deg); } }
+@keyframes page_clicked {
+  0% {
+    transform: translateY(-40px) rotate(25deg); }
+  10% {
+    transform: translateY(-60px) rotate(20deg); }
+  100% {
+    transform: translateX(-10px) scale(1.5) rotate(0deg); } }
+.folder {
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  background: #eee;
+  width: 100px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 8px solid #8c9196;
+  border-top-width: 32px;
+  border-radius: 0 3.25px 3.25px;
+  transition: border-top-width 0.3s, transform 0.2s;
+  transform-origin: 0% 100%;
+  cursor: pointer; }
+
+.folder:before,
+.folder:after {
+  content: '';
+  background: #8c9196; }
+
+.folder:before,
+.folder:after,
+.folder i {
+  position: absolute; }
+
+.folder:before {
+  width: 35px;
+  height: 5px;
+  bottom: 52px;
+  left: -8px;
+  border-radius: 3.25px 3.25px 0 0; }
+
+.folder i,
+.folder:after {
+  width: 100px;
+  height: 50px;
+  line-height: 72px;
+  text-align: center;
+  bottom: -8px;
+  left: -8px;
+  transition: transform 0.2s, background 0.2s;
+  transform-origin: 0% 100%; }
+
+.folder:after {
+  background: #8c9196;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3.25px; }
+
+.folder i {
+  z-index: 2;
+  color: #8c9196;
+  font-size: 45px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25); }
+
+.folder:hover {
+  border-top-width: 8px; }
+
+.folder:hover:after,
+.folder:hover i {
+  transform: scaleY(0.85) skewX(-15deg); }
+
+.folder:hover:after {
+  background: #8c9196; }
+
+.folder:hover:i {
+  color: #8c9196; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,20 @@
+.admin-tools-container div {
+  display: flex;
+  justify-content: center; }
+.admin-tools-container a {
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  display: block; }
+  .admin-tools-container a img {
+    height: 50px;
+    margin: 15px; }
+  .admin-tools-container a span {
+    color: #FFF;
+    text-decoration: none; }
+  .admin-tools-container a:hover {
+    background-color: rgba(14, 12, 17, 0.58); }
+    .admin-tools-container a:hover:before {
+      background-color: rgba(14, 12, 17, 0.58); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,435 @@
+img {
+  vertical-align: middle;
+  max-width: 100%; }
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent; }
+
+/* Container */
+.container {
+  position: absolute;
+  width: 24em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: intro 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+/* Profile Card */
+.profile {
+  position: relative; }
+
+.profile--open .profile__form {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  transform: translateY(-6em);
+  padding-top: 12em; }
+
+.profile--open .profile__fields {
+  opacity: 1;
+  visibility: visible; }
+
+.profile--open .profile__avatar {
+  transform: translate(-50%, -3.5em); }
+
+.profile__form {
+  position: relative;
+  background: white;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 3em;
+  border-radius: .25em;
+  -webkit-filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.2));
+  transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.profile__fields {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.profile__avatar {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  width: 6.5em;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform; }
+
+.profile__avatar:focus {
+  outline: 0; }
+
+.profile__footer {
+  position: absolute;
+  left: 45%;
+  margin-left: -100px;
+  bottom: 0; }
+
+/* Form */
+.field {
+  position: relative;
+  margin-bottom: 2em; }
+
+.label {
+  position: absolute;
+  left: 0;
+  height: 2rem;
+  line-height: 2rem;
+  bottom: 0;
+  color: #999;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+.input {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #eee;
+  color: #777;
+  transition: all .2s ease-in; }
+
+.input:focus {
+  outline: 0;
+  border-color: #ccc; }
+
+/* Using required and a faux pattern to see if input has text from http://stackoverflow.com/questions/16952526/detect-if-an-input-has-text-in-it-using-css */
+.input:focus + .label,
+input:valid + .label {
+  transform: translateY(-100%);
+  font-size: 0.75rem;
+  color: #ccc; }
+
+/* Button */
+.btn {
+  border: 0;
+  font-size: 0.75rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  color: white;
+  background: #8E49E8;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  letter-spacing: .2em;
+  transition: background .2s;
+  margin: 10px; }
+
+.btn:focus {
+  outline: 0; }
+
+.btn:hover,
+.btn:focus {
+  background: #A678E2; }
+
+/* Intro animation */
+@keyframes intro {
+  from {
+    opacity: 0;
+    top: 0; }
+  to {
+    opacity: 1;
+    top: 50%; } }
+.wrapper-header {
+  margin-top: 10px; }
+
+.letter {
+  font-family: Lekton;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  margin: 0 0;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4em;
+  letter-spacing: .1em;
+  text-decoration: none; }
+  .letter:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: #2f3031; }
+
+.letter:nth-child(1):before {
+  content: "1036875294";
+  margin-top: -72px;
+  animation-name: letter1;
+  animation-duration: 1.77s;
+  animation-delay: 0.41s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter1 {
+  from {
+    margin-top: -72px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(2):before {
+  content: "1824659370";
+  margin-top: -192px;
+  animation-name: letter2;
+  animation-duration: 1.31556s;
+  animation-delay: 0.63s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter2 {
+  from {
+    margin-top: -192px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(3):before {
+  content: "7502146389";
+  margin-top: -120px;
+  animation-name: letter3;
+  animation-duration: 1.13333s;
+  animation-delay: 0.66s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter3 {
+  from {
+    margin-top: -120px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(4):before {
+  content: "6820134759";
+  margin-top: -24px;
+  animation-name: letter4;
+  animation-duration: 0.46s;
+  animation-delay: 0.77s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter4 {
+  from {
+    margin-top: -24px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(5):before {
+  content: "8501742693";
+  margin-top: -96px;
+  animation-name: letter5;
+  animation-duration: 1.728s;
+  animation-delay: 0.46s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter5 {
+  from {
+    margin-top: -96px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(6):before {
+  content: "5367184209";
+  margin-top: -72px;
+  animation-name: letter6;
+  animation-duration: 2.85s;
+  animation-delay: 0.05s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter6 {
+  from {
+    margin-top: -72px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(7):before {
+  content: "8251940673";
+  margin-top: -168px;
+  animation-name: letter7;
+  animation-duration: 3.29s;
+  animation-delay: 0.06s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter7 {
+  from {
+    margin-top: -168px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(8):before {
+  content: "0153946278";
+  margin-top: -48px;
+  animation-name: letter8;
+  animation-duration: 0.10667s;
+  animation-delay: 0.96s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter8 {
+  from {
+    margin-top: -48px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(9):before {
+  content: "3978610542";
+  margin-top: -48px;
+  animation-name: letter9;
+  animation-duration: 1.84s;
+  animation-delay: 0.31s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter9 {
+  from {
+    margin-top: -48px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(10):before {
+  content: "2105378649";
+  margin-top: -72px;
+  animation-name: letter10;
+  animation-duration: 2.1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter10 {
+  from {
+    margin-top: -72px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(11):before {
+  content: "0975318462";
+  margin-top: -24px;
+  animation-name: letter11;
+  animation-duration: 0.34s;
+  animation-delay: 0.83s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter11 {
+  from {
+    margin-top: -24px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(12):before {
+  content: "2471065398";
+  margin-top: -144px;
+  animation-name: letter12;
+  animation-duration: 1.81714s;
+  animation-delay: 0.47s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter12 {
+  from {
+    margin-top: -144px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(13):before {
+  content: "0586179324";
+  margin-top: -72px;
+  animation-name: letter13;
+  animation-duration: 0.96s;
+  animation-delay: 0.68s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter13 {
+  from {
+    margin-top: -72px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(14):before {
+  content: "8214576930";
+  margin-top: -216px;
+  animation-name: letter14;
+  animation-duration: 3.384s;
+  animation-delay: 0.06s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter14 {
+  from {
+    margin-top: -216px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(15):before {
+  content: "5067483921";
+  margin-top: -72px;
+  animation-name: letter15;
+  animation-duration: 0.27s;
+  animation-delay: 0.91s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter15 {
+  from {
+    margin-top: -72px; }
+  to {
+    margin-top: 24px; } }
+.letter:nth-child(16):before {
+  content: "8943615207";
+  margin-top: -216px;
+  animation-name: letter16;
+  animation-duration: 1.728s;
+  animation-delay: 0.52s;
+  animation-fill-mode: forwards; }
+
+@keyframes letter16 {
+  from {
+    margin-top: -216px; }
+  to {
+    margin-top: 24px; } }
+@-webkit-keyframes spinnerRotate {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }
+@-moz-keyframes spinnerRotate {
+  from {
+    -moz-transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg); } }
+@-ms-keyframes spinnerRotate {
+  from {
+    -ms-transform: rotate(0deg); }
+  to {
+    -ms-transform: rotate(360deg); } }
+#spin {
+  -webkit-animation-name: spinnerRotate;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinnerRotate;
+  -moz-animation-duration: 20s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spinnerRotate;
+  -ms-animation-duration: 20s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear; }
+
+.profile-container {
+  padding: 100px;
+  text-align: center; }
+
+.profile-img {
+  display: block;
+  height: 7em;
+  margin-right: auto;
+  margin-left: auto;
+  border: .2em solid #636363;
+  border-radius: 100%;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
+
+.profile-text {
+  margin-top: -3.5em;
+  padding: 5em 1.5em 1.5em 1.5em;
+  background: #636363;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.profile-name {
+  margin-right: -1em;
+  margin-bottom: .75em;
+  margin-left: -1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: .75em;
+  font-size: 1.5em;
+  text-transform: uppercase; }
+
+.profile-title {
+  color: #ccc;
+  cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */

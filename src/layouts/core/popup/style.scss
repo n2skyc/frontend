@@ -1,0 +1,8 @@
+.settings-list {
+  & li {
+    cursor: pointer;
+    & img {
+      height: 55px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.topbar {
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  & ul {
+    overflow: auto;
+    text-align: center;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .3) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .3) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .3) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .3) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+    & li {
+      display: inline-block;
+      & a {
+        cursor: pointer;
+        padding: 18px;
+        color: #fdfdfd;
+        font-family: Lekton;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        margin: 0 0;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .1em;
+        text-decoration: none;
+        &:hover {
+          box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.1), inset 0 0 4px 0px rgba(255, 255, 255, 0.6);
+          background: #ffffff;
+          color: #777;
+        }
+      }
+      & .no-action {
+        padding: 18px;
+        color: #fdfdfd;
+        font-family: Lekton;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        margin: 0 0;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .1em;
+        text-decoration: none;
+        & img {
+          height: 24px;
+        }
+      }
+      & .tab {
+        padding: 18px;
+        color: #fdfdfd;
+        font-family: Lekton;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        overflow: hidden;
+        margin: 0 0;
+        letter-spacing: .1em;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.1), inset 0 0 4px 0px rgba(255, 255, 255, 0.6);
+          background: #ffffff;
+          color: #777;
+        }
+      }
+    }
+    & .right-float {
+      float: right;
+    }
+    & .left-float {
+      float: left;
+    }
+    & .standard-nav-item {
+      width: 200px;
+      padding: 10px;
+    }
+  }
+}
+
+.monitoring-container {
+
+}

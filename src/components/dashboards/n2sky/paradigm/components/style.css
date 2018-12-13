@@ -1,0 +1,48 @@
+.container-paradigm-wrapper {
+  display: flex;
+  justify-content: center; }
+  .container-paradigm-wrapper .container-paradigm {
+    max-width: 500px;
+    padding: 20px; }
+  .container-paradigm-wrapper .no-trs {
+    text-transform: none;
+    color: white;
+    padding: 10px; }
+
+.paradigm-back-title {
+  align-items: center; }
+  .paradigm-back-title img {
+    height: 50px;
+    display: block;
+    margin: 15px auto; }
+
+.paradigm-fixed-labels h1 {
+  text-transform: none; }
+
+.circle-grid {
+  display: table;
+  width: 100%; }
+  .circle-grid .grid-table {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+
+.layout-button-bar {
+  padding: 30px; }
+  .layout-button-bar input {
+    padding: 5px; }
+
+.hidden-layers-node-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px; }
+
+.cyt-container {
+  width: 100%;
+  height: 400px; }
+
+.inline-input {
+  display: inline !important;
+  margin: 5px !important; }
+
+/*# sourceMappingURL=style.css.map */

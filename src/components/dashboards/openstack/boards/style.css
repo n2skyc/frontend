@@ -1,0 +1,105 @@
+.container-nn {
+  margin: 10px;
+  padding-top: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+  background-color: #3e3b3b;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.3) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px; }
+
+.icon-button-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer; }
+  .icon-button-container img {
+    height: 40px; }
+
+tr {
+  background-color: #FFF; }
+
+tbody tr:hover {
+  background-color: #efefef; }
+
+.header-container-panel {
+  padding: 20px;
+  text-transform: capitalize; }
+
+.container-panel h1 {
+  padding: 0 0 0 20px; }
+.container-panel ul {
+  background: #FFF;
+  padding: 15px; }
+  .container-panel ul .link {
+    cursor: pointer; }
+    .container-panel ul .link img {
+      height: 35px;
+      margin-right: 8px; }
+    .container-panel ul .link:hover {
+      background-color: #e0e0e0; }
+  .container-panel ul li {
+    padding: 0 0 5px 10px; }
+    .container-panel ul li span {
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #444444; }
+  .container-panel ul img {
+    height: 30px; }
+
+.container-header-panel {
+  display: flex;
+  justify-content: space-between; }
+  .container-header-panel .header-panel-icon {
+    height: 35px;
+    margin-left: 10px;
+    cursor: pointer; }
+  .container-header-panel .is-running-header {
+    justify-content: space-between;
+    display: flex; }
+    .container-header-panel .is-running-header img {
+      height: 35px;
+      padding: 0 20px 0 15px; }
+  .container-header-panel .button-in-header {
+    width: 250px; }
+
+.raw-model {
+  max-height: 150px;
+  font-family: "Courier New", monospace; }
+
+.draw-border {
+  box-shadow: inset 0 0 0 3px #FFF;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+  border-radius: 5px; }
+  .draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0; }
+  .draw-border::before {
+    border-bottom-width: 3px;
+    border-left-width: 3px; }
+  .draw-border::after {
+    border-top-width: 3px;
+    border-right-width: 3px; }
+  .draw-border:hover::before, .draw-border:hover::after {
+    border-radius: 5px;
+    border-color: #444444;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%; }
+  .draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s; }
+  .draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s; }
+
+/*# sourceMappingURL=style.css.map */
